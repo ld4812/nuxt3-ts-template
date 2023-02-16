@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>企業・ビジネスサイト向け 無料ホームページテンプレート tp_biz60</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ここにサイト説明を入れます" name="description">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="container">
+
+    <!--開閉ブロック-->
+    <div id="menubar">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="company.html">会社概要</a></li>
+                <li><a href="">サービス紹介</a>
+                    <ul>
+                        <li><a href="service.html">メニュー</a></li>
+                        <li><a href="service.html">メニュー</a></li>
+                        <li><a href="service.html">メニュー</a></li>
+                    </ul>
+                </li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <div class="sh">
+            <p>※800px以下のメニュー開閉時にのみ表示させたい情報があればここ（shボックスの中）に入れて下さい。<br>
+                サンプルテキスト。サンプルテキスト。<br>
+                サンプルテキスト。サンプルテキスト。<br>
+                サンプルテキスト。サンプルテキスト。</p>
+        </div>
+        <!--/.sh-->
+
+    </div>
+    <!--/#menubar-->
+
+    <main>
+
+        <div class="c2">
+
+            <div class="main">
+
+                <section>
+
+                    <h2>2カラムで使う事もできます</h2>
+
+                    <h3>２カラムを使う際の解説</h3>
+                    <p>まず、２カラムにしたいブロックの外枠として、<span class="color-check">c2</span>ブロックを作ります。<br>
+                        その中に、<span class="color-check">main</span>ブロックと<span class="color-check">sub</span>ブロックを入れて下さい。<br>
+                        ここのmainブロックというのは、classでつけた名前で、main要素とは異なります。（.mainとmainの違い。）</p>
+
+                    <pre class="look" style="margin-left: 20px;">&lt;div class=&quot;<span class="color-check">c2</span>&quot;&gt;<br>
+	&lt;div class=&quot;<span class="color-check">main</span>&quot;&gt;
+	※ここにメインコンテンツの内容を入れます。
+	&lt;/div&gt;<br>
+	&lt;div class=&quot;<span class="color-check">sub</span>&quot;&gt;
+	※ここにサブコンテンツの内容を入れます。
+	&lt;/div&gt;<br>
+&lt;/div&gt;</pre>
+
+                    <h3>画面幅が800px未満の小さな端末での閲覧時は</h3>
+                    <p>
+                        サブメニューが上で、メインコンテンツがその下に配置されます。順番を逆にしたい場合（メインコンテンツを上にしたい場合）、cssフォルダのstyle.cssの「.main」と「.sub」にある「order」の数字を入れ替えて下さい。<br>
+                        入れ替えた場合、大きな端末でも順番(左右ブロック)が入れ替わってしまうので、大きな端末だけは今のままがいいなら、style.cssの下の方にある、<br>
+                        <span class="look">@media screen and (min-width:800px) {</span><br>
+                        の中にある、<br>
+                        「.main」に「order: 2;」を、「.sub」に「order: 1;」を新規で追加して下さい。</p>
+
+                    <h3>小さな端末時にサブブロックなど任意の情報を非表示にして、開閉ブロック内に表示させる方法</h3>
+                    <p>
+                        現状のままだと、800px未満で見た際にサブメニューが結構場所をとるので、それを非表示にして代わりに開閉ブロック内に表示させる方法の紹介です。<br>
+                        既存のサブメニューをそのまま開閉ブロック内に表示させる事はできないので、手作業で別途用意します。</p>
+                    <p>まず、html側の開閉ブロック内にある、<br>
+                        <span class="look">&lt;div class=&quot;sh&quot;&gt;<br>
+・・・<br>
+&lt;/div&gt;</span><br>
+                        の中に、小さな端末時にのみ表示させたいサブブロック情報などをあらかじめ入力しておきます。</p>
+                    <p>次に、小さな端末時で非表示にしたいサブブロック情報などに、<br>
+                        <span class="look">class=&quot;pc&quot;</span><br>
+                        と指定しておきましょう。<br>
+                        既にclassばある場合は半角スペースで区切って追加します。<br>
+                        例：<span class="look">&lt;div class=&quot;sub <span
+                                class="color-check">pc</span>&quot;&gt;</span></p>
+                    <p>注意点ですが、sh内に追加する際、&lt;div class=&quot;sub&quot;&gt;ごと入れてしまうとレイアウトが崩れる可能性があるので、subは含めず中身だけ入れて下さい。</p>
+
+                </section>
+
+            </div>
+            <!--/.main-->
+
+            <div class="sub">
+
+                <h3>Menu</h3>
+                <ul class="submenu">
+                    <li><a href="#">メニューサンプル</a></li>
+                    <li><a href="#">メニューサンプル</a></li>
+                    <li><a href="#">メニューサンプル</a></li>
+                    <li><a href="#">メニューサンプル</a></li>
+                    <li><a href="#">メニューサンプル</a></li>
+                </ul>
+
+            </div>
+            <!--/.sub-->
+
+        </div>
+        <!--/.c2-->
+
+        <section class="bg1">
+
+            <h2>背景に色をつけたタイプ</h2>
+            <p>&lt;section&gt;を&lt;section class=&quot;<span class="color-check">bg1</span>&quot;&gt;にするとこのブロックのように背景に色がつきます。
+            </p>
+
+            <div class="list-container">
+
+                <div class="list blur">
+                    <figure><img alt="" src="images/sample1.jpg"></figure>
+                    <div class="text">
+                        <h4>Sample Title</h4>
+                        <p>ここに説明を入れます。サンプルテキスト。</p>
+                    </div>
+                    <span class="new">NEW</span>
+                </div>
+
+                <div class="list blur">
+                    <figure><img alt="" src="images/sample1.jpg"></figure>
+                    <div class="text">
+                        <h4>Sample Title</h4>
+                        <p>ここに説明を入れます。サンプルテキスト。</p>
+                    </div>
+                </div>
+
+                <div class="list blur">
+                    <figure><img alt="" src="images/sample1.jpg"></figure>
+                    <div class="text">
+                        <h4>Sample Title</h4>
+                        <p>ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。</p>
+                    </div>
+                </div>
+
+            </div>
+            <!--/.list-container-->
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <ul id="footermenu">
+            <li><a href="#">フッターメニュー</a></li>
+            <li><a href="#">フッターメニュー</a></li>
+            <li><a href="#">フッターメニュー</a></li>
+            <li><a href="#">フッターメニュー</a></li>
+            <li><a href="#">フッターメニュー</a></li>
+        </ul>
+
+        <div class="copy">
+            <small>Copyright&copy; <a href="index.html">SAMPLE COMPANY</a> All Rights Reserved.</small>
+            <span class="pr"><a href="https://template-party.com/"
+                                target="_blank">《Web Design:Template-Party》</a></span>
+        </div>
+
+    </footer>
+
+    <!--開閉ボタン（ハンバーガーアイコン）-->
+    <div id="menubar_hdr">
+        <span></span><span></span><span></span>
+    </div>
+
+</div>
+<!--/#container-->
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--パララックス（inview）-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="js/jquery.inview_set.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="js/main.js"></script>
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+</body>
+</html>

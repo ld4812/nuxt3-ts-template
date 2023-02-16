@@ -6,9 +6,16 @@
     "es2021": true
   },
   "extends": [
+    "plugin:vue/vue3-recommended",
     "eslint:recommended",
-    "@vue/eslint-config-typescript",
-    "@vue/eslint-config-prettier"
+    "@nuxtjs/eslint-config-typescript",
+    "@vue/prettier"
   ],
-  "overrides": []
+  "overrides": [],
+  "plugins": [
+    "vue",
+    "@typescript-eslint"
+  ],
+  "rules": {
+  }
 }
